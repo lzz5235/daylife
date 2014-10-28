@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"> 
+<!--    <servlet>  
+        <servlet-name>initServlet</servlet-name>  
+        <servlet-class>  
+            org.lizhaozhong.weixin.servlet.InitServlet  
+        </servlet-class>  
+ 
+        <init-param>  
+            <param-name>appid</param-name>  
+            <param-value>wx3f8268324cc0d89e</param-value>  
+        </init-param>  
+        <init-param>  
+            <param-name>appsecret</param-name>  
+            <param-value>e5d1d5d57f3a070b55ac2e3738a96000</param-value>  
+        </init-param>  
+        <load-on-startup>0</load-on-startup>  
+    </servlet>  --> 
+     
+    <servlet>  
+        <servlet-name>coreServlet</servlet-name>  
+        <servlet-class>  
+            org.lizhaozhong.weixin.servlet.CoreServlet  
+        </servlet-class>  
+    </servlet>  
+  
+    <!-- url-pattern中配置的/coreServlet用于指定该Servlet的访问路径 -->  
+    <servlet-mapping>  
+        <servlet-name>coreServlet</servlet-name>  
+        <url-pattern>/coreServlet</url-pattern>  
+    </servlet-mapping>  
+  
+    <welcome-file-list>  
+        <welcome-file>index.jsp</welcome-file>  
+    </welcome-file-list>  
+</web-app>  
